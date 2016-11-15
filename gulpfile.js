@@ -1,10 +1,11 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
+/* eslint func-names: "off" */
 const gulp = require('gulp');
 const istanbul = require('gulp-istanbul');
 const mocha = require('gulp-mocha');
 const eslint = require('gulp-eslint');
 
-const src = ['./index.js'];
+const src = ['./index.js', './lib/**/*.js'];
 const test = ['./test/setUpBluebird.js', './test/**/*test.js'];
 
 gulp.task('lint', () => {
@@ -14,13 +15,13 @@ gulp.task('lint', () => {
     .pipe(eslint.failAfterError());
 });
 
-gulp.task('pre-test', function () {
+gulp.task('pre-test', () => {
   return gulp.src(src)
     .pipe(istanbul())
     .pipe(istanbul.hookRequire());
 });
 
-gulp.task('test', ['pre-test'], function () {
+gulp.task('test', ['pre-test'], () => {
   return gulp.src(test)
     .pipe(mocha())
     .pipe(istanbul.writeReports({ reporters: ['text', 'text-summary', 'html'] }));
