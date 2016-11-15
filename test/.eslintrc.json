@@ -9,9 +9,11 @@
   },
   "rules": {
     "arrow-body-style": "off",
-    "import/no-extraneous-dependencies": ["error"],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/test/**/*.js"]}],
     "no-bitwise": ["error", { "allow": ["|"] }],
     "no-underscore-dangle": "off",
-    "strict": "off"
+    "strict": "off",
+    "func-names": "off",
+    "prefer-arrow-callback": "off"
   }
 }

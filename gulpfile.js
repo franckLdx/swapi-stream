@@ -6,7 +6,7 @@ const mocha = require('gulp-mocha');
 const eslint = require('gulp-eslint');
 
 const src = ['./index.js', './lib/**/*.js'];
-const test = ['./test/setUpBluebird.js', './test/**/*test.js'];
+const test = ['./test/setUpBluebird.js', './test/**/*Test.js'];
 
 gulp.task('lint', () => {
   return gulp.src(src)
