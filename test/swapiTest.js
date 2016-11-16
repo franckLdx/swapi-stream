@@ -29,7 +29,7 @@ describe('Swapi stream test with access to http://swapi.co', function () {
             done(err);
           }
         });
-        swapiStream.on('err', done);
+        swapiStream.on('error', done);
       });
     });
   });
