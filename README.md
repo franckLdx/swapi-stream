@@ -7,8 +7,8 @@ Download [swapi data](https://swapi.co/) using a read stream.
 * To be fan of Star Wars
 
 ## Installation
-npm install --save swapi-strea
-m
+npm install --save swapi-stream
+
 ## Usage
 To get films list:
 ```javascript
