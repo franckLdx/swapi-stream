@@ -6,6 +6,9 @@ Download [swapi data](https://swapi.co/) using a read stream.
 * Node >= 6.0.0
 * To be fan of Star Wars
 
+## Installation
+npm install --save swapi-strea
+m
 ## Usage
 To get films list:
 ```javascript
@@ -36,4 +39,4 @@ __resourceName__ is mandatory. It's the resource name as defined [swapi data Res
 * STARSHIPS
 * SPECIES
 
-swapiStream.get returns a stream emitting the regular events data, end and error. As it's a stream, it returns all entities of the resource. If this does not suit your need, you may prefer a module that returns entities page by page like [swapi-node](https://www.npmjs.com/package/swapi-node).
+__swapiStream.get__ returns a stream emitting the regular events data, end and error. As it's a stream, it returns all entities of the resource. If this does not suit your need, you may prefer a module that returns entities page by page like [swapi-node](https://www.npmjs.com/package/swapi-node).
