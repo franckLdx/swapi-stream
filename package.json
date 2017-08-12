@@ -1,6 +1,6 @@
 {
   "name": "swapi-stream",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Download swapi using read stream",
   "main": "index.js",
   "scripts": {
