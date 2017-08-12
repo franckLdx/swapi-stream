@@ -21,10 +21,16 @@ gulp.task('pre-test', () => {
     .pipe(istanbul.hookRequire());
 });
 
+/* At that time of writing Istanbul does not support async/await
 gulp.task('test', ['pre-test'], () => {
   return gulp.src(test)
     .pipe(mocha())
     .pipe(istanbul.writeReports({ reporters: ['text', 'text-summary', 'html'] }));
+});*/
+
+gulp.task('test',  () => {
+  return gulp.src(test)
+    .pipe(mocha());
 });
 
 gulp.task('default', ['lint', 'test']);

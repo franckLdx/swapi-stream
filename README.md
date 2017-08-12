@@ -3,7 +3,7 @@
 Download [swapi data](https://swapi.co/) using a read stream.
 
 ## Requirement
-* Node >= 6.0.0
+* Node >= 8.0.0 (swapi-stream 1.x works with node 6.0.0)
 * To be fan of Star Wars
 
 ## Installation
