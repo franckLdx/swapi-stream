@@ -5,7 +5,7 @@ const { SwapiHttpError } = require('../lib/errors');
 
 require('chai').should();
 
-describe('Swapi stream test with access to http://swapi.co', function () {
+describe('Swapi stream test with access to https://swapi.co', function () {
   this.timeout(20000);
   describe('Get valid resources', function () {
     const RESOURCES = new Map([
@@ -42,7 +42,7 @@ describe('Swapi stream test with access to http://swapi.co', function () {
       swapiStream.on('error', (error) => {
         try {
           error.should.be.an.instanceof(SwapiHttpError);
-          error.toString().should.be.deep.equal(`Error while getting http://swapi.co/api/${WRONG_RESOURCE}: 404/NOT FOUND`);
+          error.toString().should.be.deep.equal(`Error while getting https://swapi.co/api/${WRONG_RESOURCE}: 404/NOT FOUND`);
           done();
         } catch (err) {
           done(err);
